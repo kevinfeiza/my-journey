@@ -1,0 +1,297 @@
+/* =====================================
+   01. EDUCATION PAGE
+===================================== */
+
+.education-page {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* =====================================
+   02. EDUCATION HERO
+===================================== */
+
+.education-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 560px;
+    padding: 120px var(--padding) 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.education-hero .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.education-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    right: -15%;
+    background: radial-gradient(
+        circle,
+        rgba(160, 185, 205, 0.35),
+        transparent 70%
+    );
+    filter: blur(60px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.education-hero h1 {
+    margin-top: 25px;
+    font-family: var(--font-heading);
+    font-size: clamp(65px, 10vw, 120px);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -7px;
+}
+
+.education-hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--accent-dark);
+}
+
+.education-description {
+    max-width: 480px;
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   03. EDUCATION SECTION
+===================================== */
+
+.education-section {
+    padding: 130px var(--padding);
+    background: var(--bg);
+}
+
+.education-heading {
+    margin-bottom: 75px;
+}
+
+.education-heading .eyebrow {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.education-heading h2 {
+    margin-top: 20px;
+    font-family: var(--font-heading);
+    font-size: clamp(35px, 5vw, 60px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+/* =====================================
+   04. EDUCATION LIST
+===================================== */
+
+.education-list {
+    max-width: 950px;
+    margin-left: auto;
+}
+
+.education-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 45px;
+    padding: 50px 0;
+    border-top: 1px solid var(--border);
+    transition: border-color 0.35s ease;
+}
+
+.education-card:hover {
+    border-color: var(--accent-dark);
+}
+
+.education-year {
+    padding-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* =====================================
+   05. EDUCATION DETAILS
+===================================== */
+
+.education-index {
+    color: var(--accent-dark);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.education-card:hover .education-index {
+    color: var(--text);
+}
+
+.education-details h3 {
+    margin-top: 18px;
+    font-family: var(--font-heading);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.education-place {
+    margin-top: 10px;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.education-major {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.education-note {
+    max-width: 550px;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   06. EDUCATION STATUS
+===================================== */
+
+.education-status {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover .education-status {
+    color: var(--text);
+    border-color: var(--accent-dark);
+}
+
+/* =====================================
+   07. LEARNING SECTION
+===================================== */
+
+.learning-section {
+    padding: 110px var(--padding);
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.learning-section .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.learning-section h2 {
+    margin-top: 25px;
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 6vw, 75px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -4px;
+}
+
+.learning-section h2 span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--accent-dark);
+}
+
+.learning-section > p:last-child {
+    max-width: 480px;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   08. MOBILE RESPONSIVE
+===================================== */
+
+@media screen and (max-width: 700px) {
+
+    .education-hero {
+        min-height: 460px;
+        padding-top: 90px;
+        padding-bottom: 80px;
+    }
+
+    .education-hero h1 {
+        font-size: clamp(55px, 13vw, 80px);
+        letter-spacing: -4px;
+    }
+
+    .education-description {
+        font-size: 13px;
+    }
+
+    .education-section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .education-heading {
+        margin-bottom: 55px;
+    }
+
+    .education-heading h2 {
+        font-size: clamp(35px, 9vw, 50px);
+        letter-spacing: -2px;
+    }
+
+    .education-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 35px 0;
+    }
+
+    .education-details h3 {
+        font-size: 24px;
+    }
+
+    .education-major {
+        font-size: 14px;
+    }
+
+    .education-note {
+        font-size: 13px;
+    }
+
+    .learning-section {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .learning-section h2 {
+        font-size: clamp(38px, 10vw, 55px);
+        letter-spacing: -2px;
+    }
+}

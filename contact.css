@@ -1,0 +1,222 @@
+/* =====================================
+   01. CONTACT PAGE
+===================================== */
+
+.contact-page {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* =====================================
+   02. CONTACT HERO
+===================================== */
+
+.contact-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 560px;
+    padding: 120px var(--padding) 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    right: -15%;
+    background: radial-gradient(
+        circle,
+        rgba(160, 185, 205, 0.35),
+        transparent 70%
+    );
+    filter: blur(60px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.contact-hero h1 {
+    margin-top: 25px;
+    font-family: var(--font-heading);
+    font-size: clamp(60px, 9vw, 110px);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -6px;
+}
+
+.contact-hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--accent-dark);
+}
+
+.contact-description {
+    max-width: 480px;
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   03. CONTACT SECTION
+===================================== */
+
+.contact-section {
+    padding: 130px var(--padding);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    background: var(--bg);
+}
+
+.contact-heading h2 {
+    margin-top: 25px;
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+/* =====================================
+   04. CONTACT LIST
+===================================== */
+
+.contact-list {
+    width: 100%;
+}
+
+.contact-item {
+    min-height: 110px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid var(--border);
+    transition:
+        padding 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.contact-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-item:hover {
+    padding-left: 12px;
+    border-color: var(--accent-dark);
+}
+
+.contact-label {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.contact-item h3 {
+    margin-top: 10px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-arrow {
+    color: var(--muted);
+    font-size: 25px;
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.contact-item:hover .contact-arrow {
+    color: var(--accent-dark);
+    transform: translate(5px, -5px);
+}
+
+/* =====================================
+   05. CONTACT QUOTE
+===================================== */
+
+.contact-quote {
+    padding: 110px var(--padding);
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.contact-quote p {
+    max-width: 850px;
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -2px;
+}
+
+.contact-quote span {
+    display: block;
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* =====================================
+   06. MOBILE RESPONSIVE
+===================================== */
+
+@media screen and (max-width: 700px) {
+
+    .contact-hero {
+        min-height: 460px;
+        padding-top: 90px;
+        padding-bottom: 80px;
+    }
+
+    .contact-hero h1 {
+        font-size: clamp(48px, 11vw, 75px);
+        letter-spacing: -4px;
+    }
+
+    .contact-description {
+        font-size: 13px;
+    }
+
+    .contact-section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contact-heading h2 {
+        font-size: clamp(38px, 9vw, 50px);
+        letter-spacing: -2px;
+    }
+
+    .contact-item {
+        min-height: 100px;
+    }
+
+    .contact-item h3 {
+        font-size: 18px;
+    }
+
+    .contact-quote {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .contact-quote p {
+        font-size: clamp(28px, 7vw, 38px);
+        letter-spacing: -1px;
+    }
+}
